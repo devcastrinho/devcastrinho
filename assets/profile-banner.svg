@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Luan Castro</title>
+  <desc id="desc">Banner animado preto e vermelho do perfil de Luan Castro</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050505"/>
+      <stop offset=".55" stop-color="#0d0505"/>
+      <stop offset="1" stop-color="#210000"/>
+    </linearGradient>
+    <linearGradient id="redLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#420000"/>
+      <stop offset=".5" stop-color="#ff1717"/>
+      <stop offset="1" stop-color="#6b0000"/>
+    </linearGradient>
+    <radialGradient id="portraitGlow">
+      <stop offset="0" stop-color="#ff2525" stop-opacity=".24"/>
+      <stop offset=".7" stop-color="#a90000" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ff2020" opacity=".17"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <clipPath id="portraitClip">
+      <circle cx="990" cy="178" r="122"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .pulse { animation: pulse 3s ease-in-out infinite; transform-origin: 990px 178px; }
+    .orbit { animation: spin 13s linear infinite; transform-origin: 990px 178px; }
+    .orbit-reverse { animation: spinReverse 18s linear infinite; transform-origin: 990px 178px; }
+    .scan { animation: scan 4.5s ease-in-out infinite; }
+    .dash { animation: dash 8s linear infinite; }
+    .fade-one { animation: fade 5s ease-in-out infinite; }
+    .fade-two { animation: fade 5s ease-in-out 1.4s infinite; }
+    .cursor { animation: blink 1s steps(2, end) infinite; }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: .65; }
+      50% { transform: scale(1.07); opacity: 1; }
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes spinReverse { to { transform: rotate(-360deg); } }
+    @keyframes scan {
+      0%, 100% { transform: translateY(-120px); opacity: 0; }
+      15%, 85% { opacity: .45; }
+      50% { transform: translateY(120px); opacity: .7; }
+    }
+    @keyframes dash { to { stroke-dashoffset: -160; } }
+    @keyframes fade {
+      0%, 100% { opacity: .25; }
+      50% { opacity: .9; }
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+
+  <rect width="1200" height="360" rx="18" fill="url(#background)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#dots)"/>
+  <path d="M0 0h330L110 360H0z" fill="#180000" opacity=".62"/>
+  <path d="M1200 0H930l190 360h80z" fill="#310000" opacity=".46"/>
+  <path d="M0 332C260 286 436 362 660 314s350-10 540-38v84H0z" fill="#120000"/>
+
+  <g fill="none" stroke="#d71919" opacity=".45">
+    <path class="dash" d="M34 66C150 20 230 40 306 104" stroke-width="3" stroke-dasharray="8 14"/>
+    <path class="dash" d="M40 77C145 36 219 53 291 111" stroke-width="1.5" stroke-dasharray="3 11"/>
+  </g>
+
+  <g transform="translate(82 78)">
+    <text x="0" y="0" fill="#b7b7b7" font-family="Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="3">
+      OLÁ, MEU NOME É
+    </text>
+    <text x="0" y="66" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="2">
+      LUAN <tspan fill="#ff2020" filter="url(#glow)">CASTRO</tspan>
+    </text>
+    <rect x="0" y="85" width="520" height="4" rx="2" fill="url(#redLine)"/>
+    <text x="0" y="128" fill="#e6e6e6" font-family="Consolas, monospace" font-size="20">
+      DESENVOLVIMENTO • DADOS • CLOUD<tspan class="cursor" fill="#ff2020">_</tspan>
+    </text>
+
+    <g transform="translate(0 166)" font-family="Segoe UI, Arial, sans-serif" font-size="16">
+      <g>
+        <circle cx="14" cy="14" r="14" fill="#ff2020"/>
+        <text x="14" y="20" fill="#080808" font-weight="800" text-anchor="middle">G</text>
+        <text x="40" y="20" fill="#d8d8d8">github.com/devcastrinho</text>
+      </g>
+      <g transform="translate(280 0)">
+        <circle cx="14" cy="14" r="14" fill="#ff2020"/>
+        <text x="14" y="20" fill="#080808" font-weight="800" text-anchor="middle">in</text>
+        <text x="40" y="20" fill="#d8d8d8">Luan Castro</text>
+      </g>
+    </g>
+  </g>
+
+  <circle cx="990" cy="178" r="166" fill="url(#portraitGlow)" filter="url(#softGlow)" class="pulse"/>
+  <g class="orbit" fill="none" stroke="#ff2020" stroke-width="3" stroke-linecap="round">
+    <circle cx="990" cy="178" r="151" stroke-dasharray="90 35 8 40 55 24"/>
+  </g>
+  <g class="orbit-reverse" fill="none" stroke="#780000" stroke-width="6" stroke-linecap="round">
+    <circle cx="990" cy="178" r="138" stroke-dasharray="34 48 120 70"/>
+  </g>
+
+  <circle cx="990" cy="178" r="122" fill="#090909" stroke="#d71919" stroke-width="2"/>
+  <g clip-path="url(#portraitClip)">
+    <circle cx="990" cy="178" r="118" fill="#100303"/>
+    <path d="M867 290c20-74 61-103 123-103s104 29 124 103z" fill="#1b1b1b"/>
+    <circle cx="990" cy="140" r="52" fill="#242424"/>
+    <path d="M939 137c7-50 30-74 58-74 34 0 55 28 48 83-16-17-32-25-51-26-18 0-36 6-55 17z" fill="#090909"/>
+    <rect class="scan" x="860" y="170" width="260" height="3" fill="#ff3030" filter="url(#glow)"/>
+    <text x="990" y="273" fill="#ff3030" font-family="Consolas, monospace" font-size="14" text-anchor="middle" letter-spacing="3">
+      SUA FOTO
+    </text>
+  </g>
+
+  <g fill="#ff2020">
+    <circle class="fade-one" cx="802" cy="66" r="4"/>
+    <circle class="fade-two" cx="825" cy="93" r="2.5"/>
+    <circle class="fade-one" cx="786" cy="125" r="2"/>
+    <path class="fade-two" d="M1110 56l5 11 12 2-9 8 2 12-10-6-10 6 2-12-9-8 12-2z"/>
+  </g>
+
+  <rect x="0" y="350" width="1200" height="10" fill="url(#redLine)"/>
+</svg>
