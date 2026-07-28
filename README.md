@@ -19,6 +19,10 @@
 
 ![Visualizações](https://komarev.com/ghpvc/?username=devcastrinho&label=VISITAS+NO+PERFIL&color=FF0000&style=for-the-badge)
 
+<br><br>
+
+<img width="300" src="https://user-images.githubusercontent.com/74038190/212284145-bf2c01a8-c448-4f1a-b911-996024c84606.gif" alt="Gatinho digitando"/>
+
 </div>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=0:000000,50:FF0000,100:000000" alt="Divisor vermelho"/>
